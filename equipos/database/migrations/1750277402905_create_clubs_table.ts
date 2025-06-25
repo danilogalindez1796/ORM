@@ -11,7 +11,7 @@ export default class extends BaseSchema {
       table.string('direccion').notNullable()
       table.string('poblacion')
       table.string('provincia')
-      table.string('cosPostal')
+      table.string('codPostal')
       table.string('telefono')
       table.string('colores')
       table.string('himno')

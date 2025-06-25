@@ -1,17 +1,18 @@
 /*consultas referenciadas al modelo  utlizando orm LUCID*/
-import Club from "#models/club"
+import Club from "../models/club.js"
 class ClubService {
 
-    async crear(data:<Club>) {
-        return await Club.create(data)
+    async crear(datos) {
+        return await Club.create(datos)
     }
     async listar() {
         return await Club.query
     }
-    async buscarId (id:integer){
-        return await Club.query().where('codclub',id)
+    async buscarId (codclub){
+        return await Club.query().where('codclub',codclub)
     }
-    async actualizar (id:integer, data:<Club>){
+    
+    async actualizar (id:integer, data:Club){
         const resp= await Club.findByOrFail(id)
         resp.merge(data).save()
     }

@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon'
-import { BaseModel, belongsTo, column } from '@adonisjs/lucid/orm'
-import { BelongsTo } from '@adonisjs/lucid/types/relations'
+import { BaseModel, belongsTo, column, type BelongsTo} from '@adonisjs/lucid/orm'
+
 
 export default class Club extends BaseModel {
   @column({ isPrimary: true })

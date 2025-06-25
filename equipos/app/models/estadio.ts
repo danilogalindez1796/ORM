@@ -34,6 +34,4 @@ export default class Estadio extends BaseModel {
 //relacion hasmany
 @hasMany (()=>Estadio)
 declare estadios:HasMany <typeof Estadio>
-
-
 }

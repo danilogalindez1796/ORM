@@ -3,5 +3,5 @@ import ClubController from "../../app/controller/ClubController.js";
 
 const club = new ClubController()
 
-Router.post('/crear', club.crearClub);
-Router.get('/listar', club.ListarClub);
+Router.post('/crearClub', club.crearClub);
+Router.get('/listarClub', club.ListarClub);
