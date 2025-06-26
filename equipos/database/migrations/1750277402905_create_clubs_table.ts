@@ -16,7 +16,7 @@ export default class extends BaseSchema {
       table.string('colores')
       table.string('himno')
       table.string('fax')
-      table.integer('añoFundacion')
+      table.integer('anioFundacion')
       table.integer('presupuesto')
       table.string('presidente')
       table.string('vicepresidente')

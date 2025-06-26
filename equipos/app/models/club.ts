@@ -21,8 +21,8 @@ export default class Club extends BaseModel {
   @column()
   declare provincia:string
 
-  @column()
-  declare cosPostal:string
+  @column({columnName:'codPostal'})
+  declare codPostal:string
 
   @column()
   declare telefono:string
@@ -36,8 +36,8 @@ export default class Club extends BaseModel {
   @column()
   declare fax:string
 
-  @column()
-  declare añoFundacion:number
+  @column({columnName:'anioFundacion'})
+  declare anioFundacion:number
 
   @column()
   declare presupuesto:number

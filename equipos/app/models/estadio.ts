@@ -1,6 +1,5 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column, hasMany } from '@adonisjs/lucid/orm'
-import { HasMany } from '@adonisjs/lucid/types/relations'
 
 export default class Estadio extends BaseModel {
   @column({ isPrimary: true })
@@ -11,7 +10,7 @@ export default class Estadio extends BaseModel {
 
   @column()
   declare direccion: string
-  @column()
+  @column({columnName:'codPostal'})
   declare codPostal: string
   @column()
   declare poblacion: string
@@ -25,6 +24,9 @@ export default class Estadio extends BaseModel {
   declare inaguracion: Date
   @column()
   declare dimensiones: number
+   @column()
+  declare codclub: number
+
 
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
